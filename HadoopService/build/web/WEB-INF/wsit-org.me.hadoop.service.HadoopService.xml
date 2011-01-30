@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="HadoopService" targetNamespace="http://service.hadoop.me.org/" xmlns:tns="http://service.hadoop.me.org/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" xmlns:wsaw="http://www.w3.org/2005/08/addressing" xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat"
+ >
+    <message name="getVersion"/>
+    <message name="getVersionResponse"/>
+    <message name="isClusterAvailable"/>
+    <message name="isClusterAvailableResponse"/>
+    <message name="listModels"/>
+    <message name="listModelsResponse"/>
+    <message name="getModel"/>
+    <message name="getModelResponse"/>
+    <message name="ServiceFault"/>
+    <message name="addModel"/>
+    <message name="addModelResponse"/>
+    <message name="removeModel"/>
+    <message name="removeModelResponse"/>
+    <message name="refreshModelRepository"/>
+    <message name="refreshModelRepositoryResponse"/>
+    <message name="listInputs"/>
+    <message name="listInputsResponse"/>
+    <message name="getInput"/>
+    <message name="getInputResponse"/>
+    <message name="addInput"/>
+    <message name="addInputResponse"/>
+    <message name="removeInput"/>
+    <message name="removeInputResponse"/>
+    <message name="listOutputs"/>
+    <message name="listOutputsResponse"/>
+    <message name="removeOutput"/>
+    <message name="removeOutputResponse"/>
+    <message name="prepareJob"/>
+    <message name="prepareJobResponse"/>
+    <message name="runPreparedJob"/>
+    <message name="runPreparedJobResponse"/>
+    <message name="getOutput"/>
+    <message name="getOutputResponse"/>
+    <message name="getCompressedOutput"/>
+    <message name="getCompressedOutputResponse"/>
+    <message name="uploadFile"/>
+    <message name="uploadFileResponse"/>
+    <message name="downloadFile"/>
+    <message name="downloadFileResponse"/>
+    <message name="runJob"/>
+    <message name="runJobResponse"/>
+    <message name="killJob"/>
+    <message name="killJobResponse"/>
+    <message name="putFile"/>
+    <message name="putFileResponse"/>
+    <message name="getFile"/>
+    <message name="getFileResponse"/>
+    <portType name="HadoopService">
+        <operation name="getVersion">
+            <input message="tns:getVersion"/>
+            <output message="tns:getVersionResponse"/>
+        </operation>
+        <operation name="isClusterAvailable">
+            <input message="tns:isClusterAvailable"/>
+            <output message="tns:isClusterAvailableResponse"/>
+        </operation>
+        <operation name="listModels">
+            <input message="tns:listModels"/>
+            <output message="tns:listModelsResponse"/>
+        </operation>
+        <operation name="getModel">
+            <input message="tns:getModel"/>
+            <output message="tns:getModelResponse"/>
+            <fault name="ServiceFault" message="tns:ServiceFault"/>
+        </operation>
+        <operation name="addModel">
+            <input message="tns:addModel"/>
+            <output message="tns:addModelResponse"/>
+            <fault name="ServiceFault" message="tns:ServiceFault"/>
+        </operation>
+        <operation name="removeModel">
+            <input message="tns:removeModel"/>
+            <output message="tns:removeModelResponse"/>
+        </operation>
+        <operation name="refreshModelRepository">
+            <input message="tns:refreshModelRepository"/>
+            <output message="tns:refreshModelRepositoryResponse"/>
+        </operation>
+        <operation name="listInputs">
+            <input message="tns:listInputs"/>
+            <output message="tns:listInputsResponse"/>
+        </operation>
+        <operation name="getInput">
+            <input message="tns:getInput"/>
+            <output message="tns:getInputResponse"/>
+            <fault name="ServiceFault" message="tns:ServiceFault"/>
+        </operation>
+        <operation name="addInput">
+            <input message="tns:addInput"/>
+            <output message="tns:addInputResponse"/>
+            <fault name="ServiceFault" message="tns:ServiceFault"/>
+        </operation>
+        <operation name="removeInput">
+            <input message="tns:removeInput"/>
+            <output message="tns:removeInputResponse"/>
+        </operation>
+        <operation name="listOutputs">
+            <input message="tns:listOutputs"/>
+            <output message="tns:listOutputsResponse"/>
+        </operation>
+        <operation name="removeOutput">
+            <input message="tns:removeOutput"/>
+            <output message="tns:removeOutputResponse"/>
+        </operation>
+        <operation name="prepareJob">
+            <input message="tns:prepareJob"/>
+            <output message="tns:prepareJobResponse"/>
+            <fault name="ServiceFault" message="tns:ServiceFault"/>
+        </operation>
+        <operation name="runPreparedJob">
+            <input message="tns:runPreparedJob"/>
+            <output message="tns:runPreparedJobResponse"/>
+        </operation>
+        <operation name="getOutput">
+            <input message="tns:getOutput"/>
+            <output message="tns:getOutputResponse"/>
+            <fault name="ServiceFault" message="tns:ServiceFault"/>
+        </operation>
+        <operation name="getCompressedOutput">
+            <input message="tns:getCompressedOutput"/>
+            <output message="tns:getCompressedOutputResponse"/>
+            <fault name="ServiceFault" message="tns:ServiceFault"/>
+        </operation>
+        <operation name="uploadFile">
+            <input message="tns:uploadFile"/>
+            <output message="tns:uploadFileResponse"/>
+        </operation>
+        <operation name="downloadFile">
+            <input message="tns:downloadFile"/>
+            <output message="tns:downloadFileResponse"/>
+            <fault name="ServiceFault" message="tns:ServiceFault"/>
+        </operation>
+        <operation name="runJob">
+            <input message="tns:runJob"/>
+            <output message="tns:runJobResponse"/>
+        </operation>
+        <operation name="killJob">
+            <input message="tns:killJob"/>
+            <output message="tns:killJobResponse"/>
+        </operation>
+        <operation name="putFile">
+            <input message="tns:putFile"/>
+            <output message="tns:putFileResponse"/>
+        </operation>
+        <operation name="getFile">
+            <input message="tns:getFile"/>
+            <output message="tns:getFileResponse"/>
+        </operation>
+    </portType>
+    <binding name="HadoopServicePortBinding" type="tns:HadoopService">
+        <wsp1:PolicyReference URI="#HadoopServicePortBindingPolicy"/>
+        <operation name="getVersion">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="isClusterAvailable">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="listModels">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getModel">
+            <input/>
+            <output/>
+            <fault name="ServiceFault"/>
+        </operation>
+        <operation name="addModel">
+            <input/>
+            <output/>
+            <fault name="ServiceFault"/>
+        </operation>
+        <operation name="removeModel">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="refreshModelRepository">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="listInputs">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getInput">
+            <input/>
+            <output/>
+            <fault name="ServiceFault"/>
+        </operation>
+        <operation name="addInput">
+            <input/>
+            <output/>
+            <fault name="ServiceFault"/>
+        </operation>
+        <operation name="removeInput">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="listOutputs">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="removeOutput">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="prepareJob">
+            <input/>
+            <output/>
+            <fault name="ServiceFault"/>
+        </operation>
+        <operation name="runPreparedJob">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getOutput">
+            <input/>
+            <output/>
+            <fault name="ServiceFault"/>
+        </operation>
+        <operation name="getCompressedOutput">
+            <input/>
+            <output/>
+            <fault name="ServiceFault"/>
+        </operation>
+        <operation name="uploadFile">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="downloadFile">
+            <input/>
+            <output/>
+            <fault name="ServiceFault"/>
+        </operation>
+        <operation name="runJob">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="killJob">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="putFile">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="getFile">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="HadoopService">
+        <port name="HadoopServicePort" binding="tns:HadoopServicePortBinding"/>
+    </service>
+    <wsp1:Policy wsu:Id="HadoopServicePortBindingPolicy">
+        <wsp1:ExactlyOne>
+            <wsp1:All>
+                <wsoma:OptimizedMimeSerialization/>
+                <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp1:Optional="false"/>
+                <wsrm:RMAssertion/>
+            </wsp1:All>
+        </wsp1:ExactlyOne>
+    </wsp1:Policy>
+</definitions>
+
+
+

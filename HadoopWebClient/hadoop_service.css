@@ -1,0 +1,134 @@
+.alignc {
+	text-align: center;
+}
+.alignr {
+	text-align: right;
+}
+
+body {
+	font: 15px arial,sans-serif;
+}
+h2 {
+	font-family: tahoma,arial,sans-serif;
+}
+
+.label {
+	font-weight: bold;
+	text-align: right;
+}
+
+#divSubmitJob {
+	background-color: white;
+	border: black solid medium;
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	top: 65px;
+	left: 420px;
+	width: 360px;
+	height: 215px;
+	z-index: 2;
+}
+#divSubmitJobWait {
+	background-color: white;
+	border: black solid medium;
+	display: none;
+	position: absolute;
+	text-align: center;
+	top: 65px;
+	left: 420px;
+	width: 360px;
+	height: 215px;
+	vertical-align: middle;
+	z-index: 3;
+}
+#divSubmitJobWait p {
+	font-weight: bold;
+	line-height: 180px;
+}
+#divTrackJob {
+	background-color: white;
+	border: black solid medium;
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	top: 65px;
+	left: 522px;
+	width: 305px;
+	height: 115px;
+	z-index: 2;
+}
+#divTrackJobWait {
+	background-color: white;
+	border: black solid medium;
+	display: none;
+	position: absolute;
+	text-align: center;
+	top: 65px;
+	left: 522px;
+	width: 305px;
+	height: 115px;
+	vertical-align: middle;
+	z-index: 3;
+}
+#divTrackJobWait p {
+	font-weight: bold;
+	line-height: 95px;
+}
+#divSubmitJobMsg, #divTrackJobMsg {
+	color: red;
+	font-family: tahoma,arial,sans-serif;
+	font-size: 13px;
+	text-align: center;
+}
+
+#divTitle {
+	position: absolute;
+	top: 20px;
+	left:50px;
+}
+#divTitle span {
+	font-size: 18px;
+}
+#divServices {
+	position: absolute;
+	top: 70px;
+	left: 295px;
+}
+#divNavigationBar {
+	position: absolute;
+	top: 45px;
+	left: 420px;
+}
+
+#divJobs {
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	z-index: 1;
+}
+#jobs {
+	border-collapse: collapse;
+	width: 750px;
+}
+#jobs #actions {
+	width: 25%;
+}
+#jobs #header {
+	font-size: 18px;
+}
+#jobs th, #jobs td {
+	border: black solid medium;
+}
+#job {
+	width: 100%;
+}
+#job td {
+	border-style: none;
+}
+#divJobsMsg {
+	color: red;
+	font-family: tahoma,arial,sans-serif;
+	font-size: 13px;
+	text-align: left;
+}

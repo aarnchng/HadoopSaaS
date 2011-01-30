@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.7-hudson-48-. --><xs:schema xmlns:tns="http://service.hadoop.me.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.hadoop.me.org/">
+
+<xs:element name="ServiceFault" type="tns:ServiceFault" />
+
+<xs:element name="addInput" type="tns:addInput" />
+
+<xs:element name="addInputResponse" type="tns:addInputResponse" />
+
+<xs:element name="addModel" type="tns:addModel" />
+
+<xs:element name="addModelResponse" type="tns:addModelResponse" />
+
+<xs:element name="downloadFile" type="tns:downloadFile" />
+
+<xs:element name="downloadFileResponse" type="tns:downloadFileResponse" />
+
+<xs:element name="getCompressedOutput" type="tns:getCompressedOutput" />
+
+<xs:element name="getCompressedOutputResponse" type="tns:getCompressedOutputResponse" />
+
+<xs:element name="getCompressedWCOutput" type="tns:getCompressedWCOutput" />
+
+<xs:element name="getCompressedWCOutputResponse" type="tns:getCompressedWCOutputResponse" />
+
+<xs:element name="getFile" type="tns:getFile" />
+
+<xs:element name="getFileResponse" type="tns:getFileResponse" />
+
+<xs:element name="getInput" type="tns:getInput" />
+
+<xs:element name="getInputResponse" type="tns:getInputResponse" />
+
+<xs:element name="getModel" type="tns:getModel" />
+
+<xs:element name="getModelResponse" type="tns:getModelResponse" />
+
+<xs:element name="getOutput" type="tns:getOutput" />
+
+<xs:element name="getOutputResponse" type="tns:getOutputResponse" />
+
+<xs:element name="getVersion" type="tns:getVersion" />
+
+<xs:element name="getVersionResponse" type="tns:getVersionResponse" />
+
+<xs:element name="isClusterAvailable" type="tns:isClusterAvailable" />
+
+<xs:element name="isClusterAvailableResponse" type="tns:isClusterAvailableResponse" />
+
+<xs:element name="killJob" type="tns:killJob" />
+
+<xs:element name="killJobResponse" type="tns:killJobResponse" />
+
+<xs:element name="listInputs" type="tns:listInputs" />
+
+<xs:element name="listInputsResponse" type="tns:listInputsResponse" />
+
+<xs:element name="listModels" type="tns:listModels" />
+
+<xs:element name="listModelsResponse" type="tns:listModelsResponse" />
+
+<xs:element name="listOutputs" type="tns:listOutputs" />
+
+<xs:element name="listOutputsResponse" type="tns:listOutputsResponse" />
+
+<xs:element name="prepareJob" type="tns:prepareJob" />
+
+<xs:element name="prepareJobResponse" type="tns:prepareJobResponse" />
+
+<xs:element name="putFile" type="tns:putFile" />
+
+<xs:element name="putFileResponse" type="tns:putFileResponse" />
+
+<xs:element name="refreshModelRepository" type="tns:refreshModelRepository" />
+
+<xs:element name="refreshModelRepositoryResponse" type="tns:refreshModelRepositoryResponse" />
+
+<xs:element name="removeInput" type="tns:removeInput" />
+
+<xs:element name="removeInputResponse" type="tns:removeInputResponse" />
+
+<xs:element name="removeModel" type="tns:removeModel" />
+
+<xs:element name="removeModelResponse" type="tns:removeModelResponse" />
+
+<xs:element name="removeOutput" type="tns:removeOutput" />
+
+<xs:element name="removeOutputResponse" type="tns:removeOutputResponse" />
+
+<xs:element name="runJob" type="tns:runJob" />
+
+<xs:element name="runJobResponse" type="tns:runJobResponse" />
+
+<xs:element name="runPreparedJob" type="tns:runPreparedJob" />
+
+<xs:element name="uploadFile" type="tns:uploadFile" />
+
+<xs:element name="uploadFileResponse" type="tns:uploadFileResponse" />
+
+<xs:complexType name="getCompressedOutput">
+<xs:sequence>
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+<xs:element name="outname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCompressedOutputResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobOutput" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tJobOutput">
+<xs:sequence>
+<xs:element name="arguments" type="xs:string" minOccurs="0" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="endDate" type="xs:string" minOccurs="0" />
+<xs:element name="fileName" type="xs:string" minOccurs="0" />
+<xs:element name="jobCount" type="xs:string" minOccurs="0" />
+<xs:element name="jobName" type="xs:string" minOccurs="0" />
+<xs:element name="modelAuthor" type="xs:string" minOccurs="0" />
+<xs:element name="modelDescription" type="xs:string" minOccurs="0" />
+<xs:element name="modelName" type="xs:string" minOccurs="0" />
+<xs:element name="modelVersion" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="startDate" type="xs:string" minOccurs="0" />
+<xs:element name="status" type="xs:string" minOccurs="0" />
+<xs:element name="stdErr" type="xs:string" minOccurs="0" />
+<xs:element name="stdOut" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ServiceFault">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="runPreparedJob">
+<xs:sequence>
+<xs:element name="mname" type="xs:string" minOccurs="0" />
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+<xs:element name="outname" type="xs:string" minOccurs="0" />
+<xs:element name="desc" type="xs:string" minOccurs="0" />
+<xs:element name="args" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFile">
+<xs:sequence>
+<xs:element name="filename" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFileResponse">
+<xs:sequence>
+<xs:element xmlns:ns1="http://www.w3.org/2005/05/xmlmime" name="return" ns1:expectedContentTypes="application/octet-stream" type="xs:base64Binary" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getModel">
+<xs:sequence>
+<xs:element name="mname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getModelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobModel" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tJobModel">
+<xs:sequence>
+<xs:element name="author" type="xs:string" minOccurs="0" />
+<xs:element name="description" type="xs:string" minOccurs="0" />
+<xs:element name="key" type="xs:string" minOccurs="0" />
+<xs:element name="method" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addModel">
+<xs:sequence>
+<xs:element name="filename" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addModelResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobModel" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listModels">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listModelsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobModelHeader" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tJobModelHeader">
+<xs:sequence>
+<xs:element name="author" type="xs:string" minOccurs="0" />
+<xs:element name="key" type="xs:string" minOccurs="0" />
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="version" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listOutputs">
+<xs:sequence>
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listOutputsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobOutputHeader" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tJobOutputHeader">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="downloadFile">
+<xs:sequence>
+<xs:element name="filename" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="downloadFileResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tFileSegment" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tFileSegment">
+<xs:sequence>
+<xs:element name="buffer" type="xs:base64Binary" minOccurs="0" />
+<xs:element name="fileName" type="xs:string" minOccurs="0" />
+<xs:element name="index" type="xs:int" />
+<xs:element name="next" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeOutput">
+<xs:sequence>
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+<xs:element name="outname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeOutputResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOutput">
+<xs:sequence>
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+<xs:element name="outname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOutputResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobOutput" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCompressedWCOutput">
+<xs:sequence>
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+<xs:element name="outname" type="xs:string" minOccurs="0" />
+<xs:element name="wildcard" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCompressedWCOutputResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobOutput" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareJob">
+<xs:sequence>
+<xs:element name="mname" type="xs:string" minOccurs="0" />
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareJobResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobRun" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tJobRun">
+<xs:sequence>
+<xs:element name="input" type="tns:tJobInput" minOccurs="0" />
+<xs:element name="model" type="tns:tJobModel" minOccurs="0" />
+<xs:element name="output" type="tns:tJobOutputHeader" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tJobInput">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addInput">
+<xs:sequence>
+<xs:element name="filename" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addInputResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobInput" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listInputs">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listInputsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobInputHeader" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tJobInputHeader">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeModel">
+<xs:sequence>
+<xs:element name="mname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeModelResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="putFile">
+<xs:sequence>
+<xs:element name="filename" type="xs:string" minOccurs="0" />
+<xs:element xmlns:ns2="http://www.w3.org/2005/05/xmlmime" name="handler" ns2:expectedContentTypes="application/octet-stream" type="xs:base64Binary" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="putFileResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="refreshModelRepository">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="refreshModelRepositoryResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uploadFile">
+<xs:sequence>
+<xs:element name="filename" type="xs:string" minOccurs="0" />
+<xs:element name="index" type="xs:int" />
+<xs:element name="buffer" type="xs:base64Binary" nillable="true" minOccurs="0" />
+<xs:element name="merge" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uploadFileResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isClusterAvailable">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="isClusterAvailableResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVersion">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="runJob">
+<xs:sequence>
+<xs:element name="mname" type="xs:string" minOccurs="0" />
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+<xs:element name="desc" type="xs:string" minOccurs="0" />
+<xs:element name="args" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="runJobResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobRun" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInput">
+<xs:sequence>
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getInputResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tJobInput" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="killJob">
+<xs:sequence>
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+<xs:element name="outname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="killJobResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeInput">
+<xs:sequence>
+<xs:element name="inname" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeInputResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

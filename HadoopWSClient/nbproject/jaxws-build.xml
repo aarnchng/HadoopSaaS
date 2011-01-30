@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-HadoopService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/HadoopService"/>
+        <property name="wsdl-HadoopService" location="xml-resources/web-service-references/HadoopService/wsdl/localhost_8080/HadoopService/HadoopService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/HadoopService" destdir="${build.generated.dir}/jax-wsCache/HadoopService" wsdl="${wsdl-HadoopService}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/HadoopService/HadoopService?WSDL" xnocompile="true">
+            <depends file="${wsdl-HadoopService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/HadoopService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/HadoopService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-HadoopService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/HadoopService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/me/hadoop/service"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-HadoopService"/>
+</project>

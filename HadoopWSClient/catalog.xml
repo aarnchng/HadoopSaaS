@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://155.69.151.97:8080/HadoopService/HadoopService?wsdl" uri="xml-resources/web-service-references/HadoopService/wsdl/155.69.151.97_8080/HadoopService/HadoopService.wsdl"/>
+    <system systemId="http://155.69.151.97:8080/HadoopService/HadoopService?xsd=1" uri="xml-resources/web-service-references/HadoopService/wsdl/155.69.151.97_8080/HadoopService/HadoopService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/HadoopService/HadoopService?wsdl" uri="xml-resources/web-service-references/HadoopService/wsdl/localhost_8080/HadoopService/HadoopService.wsdl"/>
+    <system systemId="http://155.69.102.251:8080/HadoopService/HadoopService?WSDL" uri="xml-resources/web-service-references/HadoopService/wsdl/155.69.102.251_8080/HadoopService/HadoopService.wsdl"/>
+    <system systemId="http://155.69.102.251:8080/HadoopService/HadoopService?xsd=1" uri="xml-resources/web-service-references/HadoopService/wsdl/155.69.102.251_8080/HadoopService/HadoopService.xsd_1.xsd"/>
+    <system systemId="http://155.69.148.19:8080/HadoopService/HadoopService?WSDL" uri="xml-resources/web-service-references/HadoopService/wsdl/155.69.148.19_8080/HadoopService/HadoopService.wsdl"/>
+    <system systemId="http://155.69.148.19:8080/HadoopService/HadoopService?xsd=1" uri="xml-resources/web-service-references/HadoopService/wsdl/155.69.148.19_8080/HadoopService/HadoopService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/HadoopService/HadoopService?WSDL" uri="xml-resources/web-service-references/HadoopService/wsdl/localhost_8080/HadoopService/HadoopService.wsdl"/>
+    <system systemId="http://localhost:8080/HadoopService/HadoopService?xsd=1" uri="xml-resources/web-service-references/HadoopService/wsdl/localhost_8080/HadoopService/HadoopService.xsd_1.xsd"/>
+</catalog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

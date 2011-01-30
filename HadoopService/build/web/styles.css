@@ -1,0 +1,35 @@
+/* 
+    Document   : styles
+    Created on : Jun 1, 2010, 4:55:25 PM
+    Author     : Aaron
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    font-family: sans-serif;
+    margin-left: 15px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    vertical-align: bottom;
+}

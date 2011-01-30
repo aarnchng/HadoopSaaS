@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="name" type="java.lang.String" value="jMCLastPage" noResource="true"/>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jVersionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jAuthorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jDescriptionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jDescriptionTextField" alignment="0" pref="307" max="32767" attributes="0"/>
+                  <Component id="jAuthorTextField" alignment="0" pref="307" max="32767" attributes="1"/>
+                  <Component id="jVersionTextField" alignment="0" pref="307" max="32767" attributes="1"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jVersionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jVersionTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jAuthorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jAuthorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jDescriptionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jDescriptionTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="193" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jVersionLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jVersionLabel.text"/>
+        <Property name="name" type="java.lang.String" value="jVersionLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jVersionTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jVersionTextField.text"/>
+        <Property name="name" type="java.lang.String" value="jVersionTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jAuthorLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jAuthorLabel.text"/>
+        <Property name="name" type="java.lang.String" value="jAuthorLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jAuthorTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jAuthorTextField.text"/>
+        <Property name="name" type="java.lang.String" value="jAuthorTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jDescriptionLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jDescriptionLabel.text"/>
+        <Property name="name" type="java.lang.String" value="jDescriptionLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jDescriptionTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jDescriptionTextField.text"/>
+        <Property name="name" type="java.lang.String" value="jDescriptionTextField" noResource="true"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
